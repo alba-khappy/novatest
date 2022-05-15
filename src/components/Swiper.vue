@@ -1,54 +1,83 @@
-<template>
-    <swiper :options="swiperOptions">
-        <swiper-slide>
-            <img src="../assets/section-actors-1.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-2.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-3.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-4.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-1.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-2.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-3.jpg">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="../assets/section-actors-4.jpg">
-        </swiper-slide>
+<template lang="pug">
+    swiper(:options="swiperOptions")
+        swiper-slide(v-for = "slide in slides")
+            actor-component(
+                :index = "slide.index",
+                :hero = "slide.hero",
+                :name = "slide.name",
+                :descr = "slide.descr"
+            )
 
-    </swiper>
+
 </template>
 
 <script>
     import 'swiper/dist/css/swiper.css'
     import { swiper, swiperSlide } from 'vue-awesome-swiper'
+    import ActorComponent from "./ActorComponent";
 
     export default {
+        title: 'Progress pagination',
         name: 'Swiper',
         components: {
+            ActorComponent,
             swiper,
-            swiperSlide
+            swiperSlide,
         },
         data() {
             return {
                 swiperOptions : {
-                    slidesPerView: 5,
+                    slidesPerView: 'auto',
                     spaceBetween: 24,
                     freeMode: true,
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev'
-                    }
-                }
+                    },
+                    pagination: {
+                            el: '.swiper-pagination',
+                            type: 'progressbar'
+                        },
+                },
+                slides: [
+                    {
+                        index: 1,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+                    {
+                        index: 2,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+                    {
+                        index: 3,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+                    {
+                        index: 4,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+                    {
+                        index: 5,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+                    {
+                        index: 6,
+                        hero: "Геральт",
+                        name: "Генри Кавилл",
+                        descr: "Один из центральных персонажей сериала, лучший друг и неизменный спутник Геральта, трубадур и бабник"
+                    },
+
+                ],
             }
         }
     }
@@ -56,15 +85,30 @@
 </script>
 
 
-<style scoped>
+<style lang="scss">
+    @import "../assets/scss/general.scss";
+
     .swiper-slide{
         display: flex;
         justify-content: center;
         flex-direction: column;
+        width: 23%;
     }
     .swiper-container {
-        height : 450px;
-        width : 100%;
+        width: 100%;
+        padding: 0 120px;
     }
+
+    .swiper-pagination-progressbar {
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background-color: #5D5D5D;
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: $redColor;
+    }
+
 
 </style>
