@@ -1,8 +1,7 @@
 <template lang="pug">
     div.ymap-container
         yandex-map(:coords="coords" :zoom="10" @click="onClick")
-            ymap-marker (marker-id="123" :coords="coords" :icon="markerIcon")
-
+            ymap-marker(marker-id="123" :coords="coords" :icon="markerIcon")
 </template>
 
 
@@ -21,13 +20,16 @@
                 imageHref: 'https://image.flaticon.com/icons/png/512/33/33447.png',
                 imageSize: [43, 43],
                 imageOffset: [0, 0],
-                content: '123 v12',
                 contentOffset: [0, 15],
-                contentLayout: '<div style="background: red; width: 50px; color: #FFFFFF; font-weight: bold;"> Marker</div>'
+                contentLayout: '<div style="width: 50px; color: #FFFFFF; font-weight: bold;"> <img src="../assets/mark.svg"> </div>'
             }
-        })
+        }),
+        methods: {
+            onClick(e) {
+                this.coords = e.get('coords');
+            },
+        },
     }
-
 </script>
 
 <style>

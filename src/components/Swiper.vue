@@ -7,8 +7,6 @@
                 :name = "slide.name",
                 :descr = "slide.descr"
             )
-
-
 </template>
 
 <script>

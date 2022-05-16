@@ -56,7 +56,6 @@
     }
 
     @media (max-width: 767px) {
-
         .footage__img-item {
                 height: 212px;
                 background-size: cover;
