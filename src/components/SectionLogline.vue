@@ -102,10 +102,6 @@
             height: 28px;
         }
 
-        .swiper-pagination {
-            margin-bottom: 24px;
-        }
-
         .section-actors--heading-wrapper {
             margin-bottom: 17px;
         }

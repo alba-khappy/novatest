@@ -1,7 +1,13 @@
 <template lang="pug">
     div.ymap-container
         yandex-map(:coords="coords" :zoom="10" @click="onClick")
-            ymap-marker(marker-id="123" :coords="coords" :icon="markerIcon")
+            ymap-marker(v-for="n in markers"
+                :key="n.id"
+                :marker-id="n.id"
+                marker-type="placemark"
+                :coords="n.coord"
+                :balloon="{ body: n.text }")
+
 </template>
 
 
@@ -15,20 +21,24 @@
             coords: [
                 55.751427, 37.618877
             ],
-            markerIcon: {
-                layout: 'default#imageWithContent',
-                imageHref: 'https://image.flaticon.com/icons/png/512/33/33447.png',
-                imageSize: [43, 43],
-                imageOffset: [0, 0],
-                contentOffset: [0, 15],
-                contentLayout: '<div style="width: 50px; color: #FFFFFF; font-weight: bold;"> <img src="../assets/mark.svg"> </div>'
-            }
+            markers: [
+                { coord: [55.7, 37.61] },
+                { coord: [55.7, 37.65] },
+                { coord: [55.7, 37.67] },
+            ].map((n, i) => ({ ...n, id: i + 1 })),
         }),
-        methods: {
-            onClick(e) {
-                this.coords = e.get('coords');
-            },
+        computed: {
+            balloonTemplate() {
+                return `
+        <div class="red">
+      `
+            }
         },
+        methods: {
+            onClick(m) {
+                this.$refs.map.myMap.balloon.open(m.coord);
+            },
+        }
     }
 </script>
 
@@ -36,6 +46,12 @@
     .ymap-container {
         height: 540px;
         margin-bottom: 96px;
+    }
+
+    .red {
+        width: 30px;
+        height: 30px;
+        background-color: #FF1E1E;
     }
 
 </style>

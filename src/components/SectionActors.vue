@@ -131,6 +131,14 @@
             width: 100%;
             padding: 0 16px;
         }
+
+        .section-actors--heading-wrapper {
+            margin-bottom: 17px;
+        }
+
+        .swiper-pagination {
+            margin-bottom: 24px;
+        }
     }
 
 </style>

@@ -174,6 +174,10 @@
         .swiper__hero, .swiper__name {
             font-size: 16px;
         }
+
+        .swiper-pagination {
+            margin-bottom: 24px;
+        }
     }
 
 

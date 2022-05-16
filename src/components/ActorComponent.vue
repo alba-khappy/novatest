@@ -60,6 +60,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-1.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {
@@ -86,6 +87,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-2.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {
@@ -103,6 +105,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-3.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {
@@ -120,6 +123,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-4.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {
@@ -137,6 +141,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-1.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {
@@ -154,6 +159,7 @@
 
         &:hover {
             background: linear-gradient(0deg, rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)), url("../assets/section-actors-2.jpg") no-repeat top;
+            background-size: cover;
         }
 
         &:hover .swiper__about-info {

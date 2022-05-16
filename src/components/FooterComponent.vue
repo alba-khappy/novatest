@@ -91,6 +91,7 @@
     }
 
     @media (max-width: 767px) {
+
         .container--footer {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, auto);
@@ -98,7 +99,7 @@
             gap: 28px 0;
         }
 
-        .footer__logo {
+        a.footer__logo {
             width: 128px;
             height: 44px;
         }
