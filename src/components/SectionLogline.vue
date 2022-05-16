@@ -44,6 +44,7 @@
         display: inline-block;
         background-color: $redColor;
         padding: 16px 46px;
+        transition: background-color 0.3s;
 
         &:hover {
             background-color: $redColorHover;

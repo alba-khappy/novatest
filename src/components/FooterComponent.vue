@@ -49,6 +49,7 @@
         font-size: 14px;
         text-decoration: underline;
         opacity: 0.7;
+        transition: opacity 0.3s;
 
         &:hover {
             opacity: 1;
@@ -59,6 +60,7 @@
     .socials-link {
         width: 32px;
         height: 32px;
+        transition: background 0.3s;
     }
 
     .socials-link--inst {
