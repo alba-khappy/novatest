@@ -66,6 +66,10 @@
                 grid-area: 1/1/2/2;
             }
         }
+
+        .footage__img-item-4, .footage__img-item-5 {
+            display: none;
+        }
     }
 
 

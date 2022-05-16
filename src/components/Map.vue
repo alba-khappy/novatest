@@ -1,31 +1,32 @@
 <template lang="pug">
     div.ymap-container
         yandex-map(:coords="coords" :zoom="10" @click="onClick")
-        ymap-marker(
-        :coords="coords"
-        marker-id="123"
-        hint-content="some hint"
-        )
+            ymap-marker (marker-id="123" :coords="coords" :icon="markerIcon")
+
 </template>
 
 
 <script>
-    import { yandexMap } from 'vue-yandex-maps';
+    import { yandexMap, ymapMarker } from 'vue-yandex-maps';
 
     export default {
         name: "shop-on-the-map",
-        components: { yandexMap },
+        components: {yandexMap, ymapMarker},
         data: () => ({
             coords: [
                 55.751427, 37.618877
             ],
-        }),
-        methods: {
-            onClick(e) {
-                this.coords = e.get('coords');
-            },
-        },
-    };
+            markerIcon: {
+                layout: 'default#imageWithContent',
+                imageHref: 'https://image.flaticon.com/icons/png/512/33/33447.png',
+                imageSize: [43, 43],
+                imageOffset: [0, 0],
+                content: '123 v12',
+                contentOffset: [0, 15],
+                contentLayout: '<div style="background: red; width: 50px; color: #FFFFFF; font-weight: bold;"> Marker</div>'
+            }
+        })
+    }
 
 </script>
 
