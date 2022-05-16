@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
     export default {
         name: "actor-component",
         props: {

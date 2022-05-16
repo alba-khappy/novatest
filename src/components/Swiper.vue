@@ -108,5 +108,73 @@
         background-color: $redColor;
     }
 
+    @media (max-width: 1024px) and (min-width: 768px){
+
+        .swiper-pagination {
+            margin-bottom: 25px;
+        }
+
+        .swiper-container {
+            padding: 0 64px;
+        }
+
+        .swiper-slide {
+            width: 40%;
+        }
+
+        .swiper__about-info {
+            left: 17px;
+            bottom: 70px;
+        }
+
+        .swiper__hero-description {
+            bottom: 63px;
+            left: 15px;
+            max-width: 200px;
+        }
+
+        .swiper__hero, .swiper__name {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        .swiper-container {
+            width: 100%;
+            padding: 0 16px;
+        }
+
+        .section-actors--slider-buttons {
+            gap: 20px;
+        }
+
+        div.swiper-button-prev, div.swiper-button-next {
+            width: 28px;
+            height: 28px;
+        }
+
+        .swiper-pagination {
+            margin-bottom: 24px;
+        }
+
+        .swiper-slide {
+            width: 66%;
+        }
+
+        .swiper__link {
+            height: 280px;
+        }
+
+        .swiper__about-info {
+            left: 16px;
+            bottom: 20px;
+        }
+
+        .swiper__hero, .swiper__name {
+            font-size: 16px;
+        }
+    }
+
 
 </style>
